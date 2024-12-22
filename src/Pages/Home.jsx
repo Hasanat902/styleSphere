@@ -1,5 +1,6 @@
 import HeroBanner from "../components/HeroBanner";
 import MultipleBanner from "../components/MultipleBanner";
+import NewCollection from "../components/NewCollection";
 
 
 const Home = () => {
@@ -7,6 +8,7 @@ const Home = () => {
         <div>
             <HeroBanner />
             <MultipleBanner />
+            <NewCollection />
         </div>
     );
 };
