@@ -25,6 +25,7 @@ const router = createBrowserRouter([
       <>
         <Navbar />
         <Mens />
+        <Footer />
       </>
     ),
   },
@@ -34,6 +35,7 @@ const router = createBrowserRouter([
       <>
         <Navbar />
         <Womens />
+        <Footer />
       </>
     ),
   },
@@ -43,6 +45,7 @@ const router = createBrowserRouter([
       <>
         <Navbar />
         <Kids />
+        <Footer />
       </>
     ),
   },
@@ -52,6 +55,7 @@ const router = createBrowserRouter([
       <>
         <Navbar />
         <Login />
+        <Footer />
       </>
     ),
   },
@@ -61,6 +65,7 @@ const router = createBrowserRouter([
       <>
         <Navbar />
         <Cart />
+        <Footer />
       </>
     ),
   },

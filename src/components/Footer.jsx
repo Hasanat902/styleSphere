@@ -14,7 +14,7 @@ const Footer = () => {
         {/* info */}
         <div className="mb-6 md:mb-0">
           <Link to="/">
-            <img src={Logo} alt="" className="w-32" />
+            <img src={Logo} alt="" className="w-24" />
           </Link>
           <p className="mt-2 text-sm">
             High-quality, sustainable clothing at affordable prices.
