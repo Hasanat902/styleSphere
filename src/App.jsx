@@ -6,6 +6,7 @@ import Womens from "./Pages/Womens";
 import Kids from "./Pages/Kids";
 import Login from "./Pages/Login";
 import Cart from "./Pages/Cart";
+import Footer from "./components/Footer";
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,7 @@ const router = createBrowserRouter([
       <>
         <Navbar />
         <Home />
+        <Footer />
       </>
     ),
   },
