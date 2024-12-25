@@ -3,8 +3,11 @@ import { Link } from "react-router-dom";
 const Item = ({ product }) => {
   return (
     <div className="group relative">
-      <Link>
-        <div className="aspect-h-1 aspect-w-1w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80 h-96">
+      <Link to={`/products/${product.id}`}>
+        <div
+          onClick={window.scrollTo(0, 0)}
+          className="aspect-h-1 aspect-w-1w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80 h-96"
+        >
           <img
             src={product.image}
             alt={product.name}
@@ -15,7 +18,7 @@ const Item = ({ product }) => {
       <div className="mt-4 flex justify-between">
         <div>
           <h3 className="text-sm text-gray-700">
-            <Link>
+            <Link to={`/products/${product.id}`}>
               <span aria-hidden="true" className="inset-0">
                 {product?.name}
               </span>

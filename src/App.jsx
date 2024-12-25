@@ -7,6 +7,7 @@ import Kids from "./Pages/Kids";
 import Login from "./Pages/Login";
 import Cart from "./Pages/Cart";
 import Footer from "./components/Footer";
+import SingleProduct from "./components/SingleProduct";
 
 const router = createBrowserRouter([
   {
@@ -65,6 +66,16 @@ const router = createBrowserRouter([
       <>
         <Navbar />
         <Cart />
+        <Footer />
+      </>
+    ),
+  },
+  {
+    path: "/products/:productId",
+    element: (
+      <>
+        <Navbar />
+        <SingleProduct />
         <Footer />
       </>
     ),
