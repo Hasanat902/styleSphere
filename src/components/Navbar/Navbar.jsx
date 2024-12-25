@@ -1,12 +1,14 @@
 import { ShoppingCart } from "lucide-react";
 import styleSphere from "../../assets/stylesphere.png";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { HiMenuAlt1, HiMenuAlt3 } from "react-icons/hi";
 import ResponsiveMenu from "./ResponsiveMenu";
+import { Shopcontext } from "../../Context/ShopContext";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const {getTotalCartItems} = useContext(Shopcontext);
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
@@ -15,7 +17,7 @@ const Navbar = () => {
   return (
     <div className="bg-white px-4 fixed w-full z-50 shadow-sm top-0 shadow-gray-400">
       <div className="max-w-7xl mx-auto px-5 flex justify-between items-center">
-        <img src={styleSphere} alt="" className="md:w-24 w-20" />
+        <Link to="/"><img src={styleSphere} alt="" className="md:w-24 w-20" /></Link>
         <div className="flex items-center gap-5">
           <nav className="hidden md:block">
             <ul className="flex items-center font-semibold text-lg gap-7">
@@ -41,7 +43,7 @@ const Navbar = () => {
           <Link to="/cart" className="relative w-10">
             <ShoppingCart />
             <div className="bg-red-500 w-5 absolute -top-2 right-1 flex items-center justify-center rounded-full text-white">
-              0
+              {getTotalCartItems()}
             </div>
           </Link>
           {/* Hamburger menu for mobile */}

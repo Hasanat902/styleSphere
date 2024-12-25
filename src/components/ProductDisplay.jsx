@@ -1,8 +1,11 @@
 import { Star } from "lucide-react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { Shopcontext } from "../Context/ShopContext";
 
 const ProductDisplay = (props) => {
   const { product } = props;
+  const {addToCart} = useContext(Shopcontext);
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 my-20 md:gap-10 px-6 md:px-0">
@@ -51,8 +54,8 @@ const ProductDisplay = (props) => {
             <div className="border bg-gray-100 p-4">XXL</div>
           </div>
         </div>
-        <Link>
-          <button className="bg-red-500 text-white px-6 py-3 my-4 w-max rounded-sm">
+        <Link to="/cart">
+          <button onClick={() => addToCart(product.id)} className="bg-red-500 text-white px-6 py-3 my-4 w-max rounded-sm">
             ADD TO CART
           </button>
         </Link>
